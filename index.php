@@ -38,6 +38,11 @@ $themes = $pdo->query("SELECT * FROM themes")->fetchAll(PDO::FETCH_ASSOC);
     <button type="submit" name="ajouter_theme">Ajouter</button>
 </form>
 
+<form method="get" action="search_results.php">
+    <input type="text" name="search" placeholder="Rechercher une ressource" required>
+    <button type="submit">Rechercher</button>
+</form>
+
 <h3>Liste des thématiques</h3>
 <ul>
     <?php foreach ($themes as $theme): ?>
